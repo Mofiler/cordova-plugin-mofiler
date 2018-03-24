@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-mofiler"
+    version="1.0.0">
+    <name>Mofiler Cordova Plugin</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/Mofiler/sdks/cordova-plugin-template.git</repo>
+    <issue>https://github.com/Mofiler/sdks/cordova-plugin-template/issues</issue>
+
+    <js-module src="www/plugin.js" name="mofiler">
+        <clobbers target="mofiler" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/plugin.js" name="mofiler">
+        <runs/>
+
+        <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
+        <clobbers target="mofiler" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="MofilerPlugin">
+          <param name="android-package" value="com.mofiler.plugins.MofilerPlugin" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/mofiler/plugins/MofilerPlugin.java" target-dir="src/com/mofiler/plugins" />
+      <source-file src="src/android/com/mofiler/plugins/functions/SetURL.java" target-dir="src/com/mofiler/plugins/functions" />
+      <source-file src="src/android/com/mofiler/plugins/functions/SetAppKey.java" target-dir="src/com/mofiler/plugins/functions" />
+      <source-file src="src/android/com/mofiler/plugins/functions/SetAppName.java" target-dir="src/com/mofiler/plugins/functions" />
+      <source-file src="src/android/com/mofiler/plugins/functions/AddIdentity.java" target-dir="src/com/mofiler/plugins/functions" />
+      <source-file src="src/android/com/mofiler/plugins/functions/SetUseVerboseContext.java" target-dir="src/com/mofiler/plugins/functions" />
+      <source-file src="src/android/com/mofiler/plugins/functions/SetReadPhoneState.java" target-dir="src/com/mofiler/plugins/functions" />
+      <source-file src="src/android/com/mofiler/plugins/functions/SetUseLocation.java" target-dir="src/com/mofiler/plugins/functions" />
+      <source-file src="src/android/com/mofiler/plugins/functions/InjectValue.java" target-dir="src/com/mofiler/plugins/functions" />
+      <source-file src="src/android/com/mofiler/plugins/functions/FlushDataToMofiler.java" target-dir="src/com/mofiler/plugins/functions" />
+      
+      <source-file src="src/android/com/mofiler/plugins/utils/AdvertisingIdClient.java" target-dir="src/com/mofiler/plugins/utils" />
+
+
+      <framework src="com.mofiler.android:mofiler-sdk:1.2.8.1" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/plugin.js" name="mofiler">
+            <runs/>
+            <clobbers target="mofiler" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="MofilerPlugin">
+                <param name="ios-package" value="MofilerPlugin" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/MofilerPlugin.h" />
+        <source-file src="src/ios/MofilerPlugin.m" />
+
+        <framework src="src/ios/Mofiler.framework" custom="true" />
+    </platform>
+</plugin>

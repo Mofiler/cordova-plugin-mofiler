@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mofiler-sdk">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/mofiler-sdk.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
