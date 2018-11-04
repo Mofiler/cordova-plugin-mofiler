@@ -34,7 +34,7 @@ NSString* appKey;
         
         mof.appKey = appKey;
         
-        [mof setSdkTypeAndVersionWithSdk_type: @"Cordova iOS SDK" sdk_version:@"1.0.1"];
+        [mof setSdkTypeAndVersionWithSdk_type: @"Cordova iOS SDK" sdk_version:@"1.0.2"];
         
         //TODO setUseLocation
         if(![mof.appName  isEqual: @""])
