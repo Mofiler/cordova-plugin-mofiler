@@ -43,7 +43,7 @@
       <source-file src="src/android/com/mofiler/plugins/utils/AdvertisingIdClient.java" target-dir="src/com/mofiler/plugins/utils" />
 
 
-      <framework src="com.mofiler.android:mofiler-sdk:1.2.8.1" />
+      <framework src="com.mofiler.android:mofiler-sdk:1.3.4" />
     </platform>
 
     <!-- ios -->

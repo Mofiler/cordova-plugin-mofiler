@@ -17,7 +17,7 @@ public class SetAppKey {
 
 			Mofiler mof = Mofiler.getInstance(cordova.getActivity());
 
-			mof.setSdkTypeAndVersion("Cordova Android SDK", "1.0.2");
+			mof.setSdkTypeAndVersion("Cordova Android SDK", "1.0.3");
 
 			mof.setAppKey(args.getString(0));
 		} catch (Exception e) {
